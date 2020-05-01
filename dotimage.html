@@ -27,7 +27,7 @@ const colormap = [
 	'#8888ff'
 ];
 
-var numArr = dotData.split('');
+let numArr = dotData.split('');
 
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -36,8 +36,6 @@ let y = 0;
 
 for (let i = 0; i < numArr.length; i++) {
 	context.fillStyle = colormap[numArr[i]];
-	console.log(numArr[i]);
-	console.log(colormap[numArr[i]]);
 	context.fillRect(x, y, pixelSize, pixelSize);
 	x += pixelSize;
 	if( x > canvas.width) {
